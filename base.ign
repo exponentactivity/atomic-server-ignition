@@ -3,7 +3,7 @@
     "config": {
       "merge": [
         {
-          "source": "https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/ssh-auth.ign"
+          "source": "https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-default-unpriv.ign"
         },
         {
           "source": "https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/image-base.ign"

@@ -1,0 +1,7 @@
+variant: fcos
+version: 1.6.0
+passwd:
+  users:
+    - name: containers
+      uid: 2000
+      shell: /sbin/nologin

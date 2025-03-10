@@ -1,0 +1,14 @@
+{
+  "ignition": {
+    "version": "3.5.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "name": "containers",
+        "shell": "/sbin/nologin",
+        "uid": 2000
+      }
+    ]
+  }
+}
