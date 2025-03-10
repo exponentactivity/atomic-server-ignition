@@ -33,4 +33,4 @@ podman run --interactive --rm --security-opt label=disable \
        --pretty --strict modules/user-containers.bu > modules/user-containers.ign
 
 git add .
-git commit
+git commit && git push
