@@ -87,5 +87,14 @@
         "target": "/home/containers/.config/systemd/user/chezmoi-initialize.service"
       }
     ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "contents": "[Unit]\nDescription=Enable Lingering for Containers user\n[Service]\nType=oneshot\nExecStart=/usr/bin/loginctl enable-linger containers\n[Install]\nWantedBy=multi-user.target\n",
+        "enabled": true,
+        "name": "linger-containers.service"
+      }
+    ]
   }
 }
