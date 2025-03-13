@@ -7,7 +7,7 @@
       {
         "dropins": [
           {
-            "contents": "[Service]\nTTYVTDisallocate=no\nExecStart=\nExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM\n",
+            "contents": "[Service]\nTTYVTDisallocate=no\nExecStart=\nExecStart=-/usr/sbin/agetty --autologin core --noclear - $TERM\n",
             "name": "autologin-core.conf"
           }
         ],

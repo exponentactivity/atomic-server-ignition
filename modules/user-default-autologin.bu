@@ -9,4 +9,4 @@ systemd:
             [Service]
             TTYVTDisallocate=no
             ExecStart=
-            ExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM
+            ExecStart=-/usr/sbin/agetty --autologin core --noclear - $TERM
