@@ -6,6 +6,9 @@
           "source": "https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-default-unpriv.ign"
         },
         {
+          "source": "https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-default-autologin.ign"
+        },
+        {
           "source": "https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/image-base.ign"
         }
       ]
