@@ -12,65 +12,9 @@
     ]
   },
   "storage": {
-    "directories": [
-      {
-        "group": {
-          "name": "containers"
-        },
-        "path": "/home/containers/.config",
-        "user": {
-          "name": "containers"
-        },
-        "mode": 493
-      },
-      {
-        "group": {
-          "name": "containers"
-        },
-        "path": "/home/containers/.config/systemd",
-        "user": {
-          "name": "containers"
-        },
-        "mode": 493
-      },
-      {
-        "group": {
-          "name": "containers"
-        },
-        "path": "/home/containers/.config/systemd/user",
-        "user": {
-          "name": "containers"
-        },
-        "mode": 493
-      },
-      {
-        "group": {
-          "name": "containers"
-        },
-        "path": "/home/containers/.config/systemd/user/default.target.wants",
-        "user": {
-          "name": "containers"
-        },
-        "mode": 493
-      }
-    ],
     "files": [
       {
         "path": "/var/lib/systemd/linger/containers",
-        "mode": 420
-      },
-      {
-        "group": {
-          "name": "containers"
-        },
-        "path": "/home/containers/.config/systemd/user/chezmoi-initialize.service",
-        "user": {
-          "name": "containers"
-        },
-        "contents": {
-          "compression": "gzip",
-          "source": "data:;base64,H4sIAAAAAAAC/3TOMU/DMBDF8d2fIgwdHe9IHqCtRDekghiiDK5zTU44Z+v8Upp+egSoI/P/Se/XvQujNzuqUbmAs/jtRLc5c3MQBofENzLbLAP/xNeAaX/liuofNjsX/6bm6QxSL4SvrJ82S2KhFkFHgvkIgvpP646kF47Um7e1kM9Cdcow+yvFI4LCu6WqO7HcnxoWRmNtKCWtzQSU+ujcyEjh1MY8u0XqxKXQoDSzDKQuIM8cbSW9kNrNi41ZEFhIazsyTHeQipBS/yul4Xn1A53DknBXfgcAAP//vCmlHiQBAAA="
-        },
         "mode": 420
       }
     ],
@@ -79,12 +23,12 @@
         "group": {
           "name": "containers"
         },
-        "path": "/home/containers/.config/systemd/user/default.target.wants/chezmoi-initialize.service",
+        "path": "/home/containers/.config/systemd/user/default.target.wants/podman.socket",
         "user": {
           "name": "containers"
         },
         "hard": false,
-        "target": "/home/containers/.config/systemd/user/chezmoi-initialize.service"
+        "target": "/usr/lib/systemd/user/podman.socket"
       }
     ]
   },
