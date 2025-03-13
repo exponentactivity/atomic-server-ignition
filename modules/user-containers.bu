@@ -7,16 +7,6 @@ passwd:
       shell: /sbin/nologin
 systemd:
   units:
-    - name: linger-containers.service
-      enabled: true
-      contents: |
-        [Unit]
-        Description=Enable Lingering for Containers user
-        [Service]
-        Type=oneshot
-        ExecStart=/usr/bin/loginctl enable-linger containers
-        [Install]
-        WantedBy=multi-user.target
 storage:
   files:
     - path: /var/lib/systemd/linger/containers

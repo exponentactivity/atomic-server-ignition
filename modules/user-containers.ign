@@ -31,14 +31,5 @@
         "target": "/usr/lib/systemd/user/podman.socket"
       }
     ]
-  },
-  "systemd": {
-    "units": [
-      {
-        "contents": "[Unit]\nDescription=Enable Lingering for Containers user\n[Service]\nType=oneshot\nExecStart=/usr/bin/loginctl enable-linger containers\n[Install]\nWantedBy=multi-user.target\n",
-        "enabled": true,
-        "name": "linger-containers.service"
-      }
-    ]
   }
 }
