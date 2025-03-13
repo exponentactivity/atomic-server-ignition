@@ -12,6 +12,48 @@
     ]
   },
   "storage": {
+    "directories": [
+      {
+        "group": {
+          "name": "containers"
+        },
+        "path": "/home/containers/.config",
+        "user": {
+          "name": "containers"
+        },
+        "mode": 493
+      },
+      {
+        "group": {
+          "name": "containers"
+        },
+        "path": "/home/containers/.config/systemd",
+        "user": {
+          "name": "containers"
+        },
+        "mode": 493
+      },
+      {
+        "group": {
+          "name": "containers"
+        },
+        "path": "/home/containers/.config/systemd/user",
+        "user": {
+          "name": "containers"
+        },
+        "mode": 493
+      },
+      {
+        "group": {
+          "name": "containers"
+        },
+        "path": "/home/containers/.config/systemd/user/default.target.wants",
+        "user": {
+          "name": "containers"
+        },
+        "mode": 493
+      }
+    ],
     "files": [
       {
         "path": "/var/lib/systemd/linger/containers",

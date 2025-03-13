@@ -8,6 +8,31 @@ passwd:
 systemd:
   units:
 storage:
+  directories:
+    - path: /home/containers/.config
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
+    - path: /home/containers/.config/systemd
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
+    - path: /home/containers/.config/systemd/user
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
+    - path: /home/containers/.config/systemd/user/default.target.wants
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
   files:
     - path: /var/lib/systemd/linger/containers
       mode: 0644
