@@ -30,6 +30,10 @@ podman run --interactive --rm --security-opt label=disable \
 
 podman run --interactive --rm --security-opt label=disable \
        --volume ${PWD}:/pwd --workdir /pwd quay.io/coreos/butane:release \
+       --pretty --strict modules/user-default-autologin.bu > modules/user-default-autologin.ign
+
+podman run --interactive --rm --security-opt label=disable \
+       --volume ${PWD}:/pwd --workdir /pwd quay.io/coreos/butane:release \
        --pretty --strict modules/user-containers.bu > modules/user-containers.ign
 
 git add .

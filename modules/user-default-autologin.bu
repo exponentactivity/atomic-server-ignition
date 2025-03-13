@@ -2,7 +2,7 @@ variant: fcos
 version: 1.6.0
 systemd:
   units:
-    - name: serial-getty@tty1.service
+    - name: getty@tty1.service
       dropins:
         - name: autologin-core.conf
           contents: |

@@ -1,0 +1,18 @@
+{
+  "ignition": {
+    "version": "3.5.0"
+  },
+  "systemd": {
+    "units": [
+      {
+        "dropins": [
+          {
+            "contents": "[Service]\nTTYVTDisallocate=no\nExecStart=\nExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM\n",
+            "name": "autologin-core.conf"
+          }
+        ],
+        "name": "getty@tty1.service"
+      }
+    ]
+  }
+}
