@@ -39,7 +39,7 @@ storage:
     - path: /home/containers/.config/systemd/user/chezmoi-initialize.service
       mode: 0644
       contents: 
-      	inline: |
+        inline: |
           [Unit]
           Description=Chezmoi Initialize
           ConditionPathExists=!%D/chezmoi
