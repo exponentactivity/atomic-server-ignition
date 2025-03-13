@@ -65,7 +65,7 @@
         "group": {
           "name": "containers"
         },
-        "path": "/home/containers/.config/systemd/user/default.target.wants/podman.socket",
+        "path": "/home/containers/.config/systemd/user/sockets.target.wants/podman.socket",
         "user": {
           "name": "containers"
         },
