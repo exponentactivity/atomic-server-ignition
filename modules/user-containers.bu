@@ -5,3 +5,60 @@ passwd:
     - name: containers
       uid: 2000
       shell: /sbin/nologin
+systemd:
+  units:
+storage:
+  directories:
+    - path: /home/containers/.config
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
+    - path: /home/containers/.config/systemd
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
+    - path: /home/containers/.config/systemd/user
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
+    - path: /home/containers/.config/systemd/user/default.target.wants
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
+  files:
+    - path: /var/lib/systemd/linger/containers
+      mode: 0644
+    - path: /home/containers/.config/systemd/user/chezmoi-initialize.service
+      mode: 0644
+      contents: 
+      	inline: |
+          [Unit]
+          Description=Chezmoi Initialize
+          ConditionPathExists=!%D/chezmoi
+          After=network-online.target
+          Wants=network-online.target
+          [Service]
+          Type=oneshot
+          ExecStart=/usr/bin/chezmoi init --apply https://gitlab.com/unshippedreminder/atomic-server-%H-containers.git
+          [Install]
+          WantedBy=default.target
+      user:
+        name: containers
+      group:
+        name: containers
+  links:
+    - path: /home/containers/.config/systemd/user/default.target.wants/chezmoi-initialize.service
+      user:
+        name: containers
+      group:
+        name: containers
+      target: /home/containers/.config/systemd/user/chezmoi-initialize.service
+      hard: false

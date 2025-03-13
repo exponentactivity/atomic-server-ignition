@@ -14,5 +14,17 @@
       ]
     },
     "version": "3.5.0"
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "compression": "",
+          "source": "data:,serv0%0A"
+        },
+        "mode": 420
+      }
+    ]
   }
 }

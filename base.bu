@@ -5,3 +5,10 @@ ignition:
     merge:
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-default-unpriv.ign
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/image-base.ign
+storage:
+  files:
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: |
+          atomic-server

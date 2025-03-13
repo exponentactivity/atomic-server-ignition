@@ -11,5 +11,17 @@
       ]
     },
     "version": "3.5.0"
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/hostname",
+        "contents": {
+          "compression": "",
+          "source": "data:,atomic-server%0A"
+        },
+        "mode": 420
+      }
+    ]
   }
 }

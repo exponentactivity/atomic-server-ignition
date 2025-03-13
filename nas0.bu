@@ -6,3 +6,10 @@ ignition:
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-default-unpriv.ign
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-containers.ign
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/image-nas0.ign
+storage:
+  files:
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: |
+          nas0
