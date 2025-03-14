@@ -47,7 +47,7 @@
         "group": {
           "name": "containers"
         },
-        "path": "/home/containers/.config/systemd/user/default.target.wants",
+        "path": "/home/containers/.config/systemd/user/sockets.target.wants",
         "user": {
           "name": "containers"
         },

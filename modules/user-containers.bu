@@ -27,7 +27,7 @@ storage:
         name: containers
       group:
         name: containers
-    - path: /home/containers/.config/systemd/user/default.target.wants
+    - path: /home/containers/.config/systemd/user/sockets.target.wants
       mode: 0755
       user:
         name: containers
