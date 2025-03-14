@@ -11,5 +11,72 @@
         ]
       }
     ]
+  },
+  "storage": {
+    "directories": [
+      {
+        "group": {
+          "name": "core"
+        },
+        "path": "/home/core/.config",
+        "user": {
+          "name": "core"
+        },
+        "mode": 493
+      },
+      {
+        "group": {
+          "name": "core"
+        },
+        "path": "/home/core/.config/systemd",
+        "user": {
+          "name": "core"
+        },
+        "mode": 493
+      },
+      {
+        "group": {
+          "name": "core"
+        },
+        "path": "/home/core/.config/systemd/user",
+        "user": {
+          "name": "core"
+        },
+        "mode": 493
+      },
+      {
+        "group": {
+          "name": "core"
+        },
+        "path": "/home/core/.config/systemd/user/default.target.wants",
+        "user": {
+          "name": "core"
+        },
+        "mode": 493
+      }
+    ],
+    "files": [
+      {
+        "path": "/home/core/.config/systemd/user/chezmoi-initialize.service",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/3TOMU/DMBDF8d2fIgyMqXckD9B26IZUEEOVwY0vyQnnbN29lKafHgHqyPx/0vud3oXRuR1Zr1zBRcJ2ottcuDkIg2PmG7ltkcQ/8TVi2l/ZYOHhcef7v6l7HkAahPBV9LMtkllog6gjwX1Egf3TTkfSC/fUube1UihCNhW4/ZX6I6Ii+MXUn1nuTw0Lo2nbWGtemwmo9uT9yMjxvOnL7BexiWulpDSzJFKfCgbOZK2RXkg3I8OdDmKIOXe/Okova0g0xCXjLvsOAAD//603toYYAQAA"
+        },
+        "mode": 420
+      }
+    ],
+    "links": [
+      {
+        "group": {
+          "name": "core"
+        },
+        "path": "/home/core/.config/systemd/user/default.target.wants/chezmoi-initialize.service",
+        "user": {
+          "name": "core"
+        },
+        "hard": false,
+        "target": "/home/core/.config/systemd/user/chezmoi-initialize.service"
+      }
+    ]
   }
 }
