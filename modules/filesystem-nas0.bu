@@ -1,0 +1,16 @@
+variant: fcos
+version: 1.6.0
+storage:
+  filesystems:
+    - device: /dev/disk/by-partlabel/root
+      wipe_filesystem: true
+      format: btrfs
+      label: root
+    - device: /dev/vdb
+      format: btrfs
+      path: /var/srv
+      wipe_filesystem: false
+      with_mount_unit: true
+      options:
+        - /dev/vdc
+        - /dev/vdd
