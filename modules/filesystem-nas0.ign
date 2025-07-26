@@ -13,7 +13,9 @@
       {
         "device": "/dev/vdb",
         "format": "btrfs",
+        "label": "media",
         "options": [
+          "raid1",
           "/dev/vdc",
           "/dev/vdd"
         ],

@@ -4,6 +4,7 @@ ignition:
   config:
     merge:
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-default-unpriv.ign
+      - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/filesystem-nas.ign
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-default-autologin.ign
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/user-containers.ign
       - source: https://raw.githubusercontent.com/exponentactivity/atomic-server-ignition/refs/heads/main/modules/image-nas0.ign
