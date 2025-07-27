@@ -6,13 +6,13 @@ storage:
       wipe_filesystem: true
       format: btrfs
       label: root
-    - device: /dev/vdb
-      format: btrfs
-      path: /var/srv
-      wipe_filesystem: false
-      label: media
-      with_mount_unit: true
-      options:
-        - raid1
-        - /dev/vdc
-        - /dev/vdd
+#    - device: /dev/vdb
+#      format: btrfs
+#      path: /var/srv
+#      wipe_filesystem: false
+#      label: media
+#      with_mount_unit: true
+#      options:
+#        - raid1
+#        - /dev/vdc
+#        - /dev/vdd
