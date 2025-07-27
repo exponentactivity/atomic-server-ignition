@@ -52,11 +52,29 @@
           "name": "containers"
         },
         "mode": 493
+      },
+      {
+        "group": {
+          "name": "containers"
+        },
+        "path": "/home/core/.config/systemd/user/default.target.wants",
+        "user": {
+          "name": "containers"
+        },
+        "mode": 493
       }
     ],
     "files": [
       {
         "path": "/var/lib/systemd/linger/containers",
+        "mode": 420
+      },
+      {
+        "path": "/home/core/.config/systemd/user/chezmoi-initialize.service",
+        "contents": {
+          "compression": "gzip",
+          "source": "data:;base64,H4sIAAAAAAAC/3TNsWrDMBCA4V1PoVI6Kuoc8FDiFDKlkJQOxsNFvtpH5JO4u6ROnr6U0rHz98PfvTNZ71rUJFSNCjebCe9zIb9jMoJMd3SbwgP94BvYtF1ITZuHpzam39S9fBpKw2hfRc6hcCbGlYGMaO4D2PQf6w4oV0rYu+OtYlMYdSrmHv1x3+7X/pUWn4nPbrtgOhiINfGiEk/Ef2tPTOZDgFrzzU9mVdcxjmQZTqtU5nhhnahWHARn4gElgpWZUlCUK0pg0OeQChsQo+hqJHPdjtUg5959BwAA//+Wtq+JHwEAAA=="
+        },
         "mode": 420
       }
     ],
@@ -71,6 +89,16 @@
         },
         "hard": false,
         "target": "/usr/lib/systemd/user/podman.socket"
+      },
+      {
+        "group": {
+          "name": "containers"
+        },
+        "path": "/home/core/.config/systemd/user/default.target.wants/chezmoi-initialize.service",
+        "user": {
+          "name": "containers"
+        },
+        "target": "/home/core/.config/systemd/user/chezmoi-initialize.service"
       }
     ]
   }

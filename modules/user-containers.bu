@@ -33,9 +33,29 @@ storage:
         name: containers
       group:
         name: containers
+    - path: /home/core/.config/systemd/user/default.target.wants
+      mode: 0755
+      user:
+        name: containers
+      group:
+        name: containers
   files:
     - path: /var/lib/systemd/linger/containers
       mode: 0644
+    - path: /home/core/.config/systemd/user/chezmoi-initialize.service
+      mode: 0644
+      contents:
+        inline: |
+          [Unit]
+          Description=Chezmoi Initialize
+          ConditionPathExists=!%D/chezmoi
+          After=network-online.target
+          Wants=network-online.target
+          [Service]
+          Type=oneshot
+          # TODO: Fix link
+          ExecStart=/usr/bin/chezmoi init --apply https://gitlab.com/unshippedreminder/atomic-server-nas0-containers.git
+          [Install]
   links:
     - path: /home/containers/.config/systemd/user/sockets.target.wants/podman.socket
       user:
@@ -44,3 +64,9 @@ storage:
         name: containers
       target: /usr/lib/systemd/user/podman.socket
       hard: false
+    - path: /home/core/.config/systemd/user/default.target.wants/chezmoi-initialize.service
+      user:
+        name: containers
+      group:
+        name: containers
+      target: /home/core/.config/systemd/user/chezmoi-initialize.service
