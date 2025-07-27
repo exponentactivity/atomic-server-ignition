@@ -11,5 +11,14 @@
         "wipeFilesystem": true
       }
     ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "contents": "[Unit]\nDescription=Media Disks\n\n[Mount]\nWhat=/dev/disk/by-uuid/eb393dc7-6fba-463f-adb8-4cfe27013079\nWhere=/var/srv/nfs\nType=btrfs\nOptions=defaults\n\n[Install]\nWantedBy=multi-user.target\n",
+        "enabled": true,
+        "name": "var-srv-nfs.mount"
+      }
+    ]
   }
 }

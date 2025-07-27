@@ -6,6 +6,8 @@ storage:
       wipe_filesystem: true
       format: btrfs
       label: root
+
+### Command: `sudo mkfs.btrfs --label media -d raid0 /dev/vdb /dev/vdc /dev/vdd`
 #    - device: /dev/vdb
 #      format: btrfs
 #      path: /var/srv
@@ -16,3 +18,19 @@ storage:
 #        - raid1
 #        - /dev/vdc
 #        - /dev/vdd
+systemd:
+  units:
+    - name: var-srv-nfs.mount
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Media Disks
+
+        [Mount]
+        What=/dev/disk/by-uuid/eb393dc7-6fba-463f-adb8-4cfe27013079
+        Where=/var/srv/nfs
+        Type=btrfs
+        Options=defaults
+
+        [Install]
+        WantedBy=multi-user.target
